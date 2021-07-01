@@ -32,6 +32,7 @@ import Account from './components/Account.vue'
 import Activity from './components/Activity.vue'
 import Timeline from './components/Timeline.vue'
 import UserCard from './components/UserCard.vue'
+
 export interface IProfile {
   name: string
   email: string
