@@ -12,6 +12,7 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    'vue/object-curly-spacing': 'off',
     'space-before-function-paren': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -40,8 +41,8 @@ module.exports = {
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     'vue/eqeqeq': 'error',
     'vue/key-spacing': 'error',
-    'vue/match-component-file-name': 'error',
-    'vue/object-curly-spacing': 'error'
+    'vue/match-component-file-name': 'error'
+    // 'vue/object-curly-spacing': 'error'
   },
   overrides: [
     {
