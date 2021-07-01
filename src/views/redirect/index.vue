@@ -1,6 +1,5 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-
 @Component({
   name: 'Redirect'
 })
@@ -14,7 +13,7 @@ export default class extends Vue {
   }
 
   render() {
-    // Avoid warning for missing template test
+    // render template
   }
 }
 </script>
