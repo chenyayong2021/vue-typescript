@@ -1,10 +1,10 @@
 <template>
   <el-table
-    :data="list"
-    border
-    fit
-    highlight-current-row
-    style="width: 100%"
+   :data="list"
+   border
+   fit
+  highlight-current-row
+ style="width: 100%"
   >
     <el-table-column
       v-loading="loading"
