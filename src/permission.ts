@@ -5,10 +5,10 @@ import { Message } from 'element-ui'
 import { Route } from 'vue-router'
 import { UserModule } from '@/store/modules/user'
 import { PermissionModule } from '@/store/modules/permission'
-import i18n from '@/lang' // Internationalization
+import i18n from '@/lang'
 import settings from './settings'
 
-NProgress.configure({ showSpinner: false })
+NProgress.configure({ showSpinner: true })
 
 const whiteList = ['/login', '/auth-redirect']
 
