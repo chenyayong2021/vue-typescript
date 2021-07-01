@@ -8,41 +8,26 @@
       highlight-current-row
       style="width: 100%"
     >
-      <el-table-column
-        align="center"
-        label="ID"
-        width="80"
-      >
-        <template slot-scope="{row}">
+      <el-table-column align="center" label="ID" width="80">
+        <template slot-scope="{ row }">
           <span>{{ row.id }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column
-        width="180px"
-        align="center"
-        label="Date"
-      >
-        <template slot-scope="{row}">
+      <el-table-column width="180px" align="center" label="Date">
+        <template slot-scope="{ row }">
           <span>{{ row.timestamp | parseTime }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column
-        align="center"
-        label="Author"
-        width="180px"
-      >
-        <template slot-scope="{row}">
+      <el-table-column align="center" label="Author" width="180px">
+        <template slot-scope="{ row }">
           <span>{{ row.author }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column
-        width="105px"
-        label="Importance"
-      >
-        <template slot-scope="{row}">
+      <el-table-column width="105px" label="Importance">
+        <template slot-scope="{ row }">
           <svg-icon
             v-for="n in +row.importance"
             :key="n"
@@ -52,29 +37,18 @@
         </template>
       </el-table-column>
 
-      <el-table-column
-        class-name="status-col"
-        label="Status"
-        width="110"
-      >
-        <template slot-scope="{row}">
+      <el-table-column class-name="status-col" label="Status" width="110">
+        <template slot-scope="{ row }">
           <el-tag :type="row.status | articleStatusFilter">
             {{ row.status }}
           </el-tag>
         </template>
       </el-table-column>
 
-      <el-table-column
-        min-width="250px"
-        label="Title"
-      >
-        <template slot-scope="{row}">
+      <el-table-column min-width="250px" label="Title">
+        <template slot-scope="{ row }">
           <template v-if="row.edit">
-            <el-input
-              v-model="row.title"
-              class="edit-input"
-              size="small"
-            />
+            <el-input v-model="row.title" class="edit-input" size="small" />
             <el-button
               class="cancel-btn"
               size="small"
@@ -89,12 +63,8 @@
         </template>
       </el-table-column>
 
-      <el-table-column
-        align="center"
-        label="Actions"
-        width="120"
-      >
-        <template slot-scope="{row}">
+      <el-table-column align="center" label="Actions" width="120">
+        <template slot-scope="{ row }">
           <el-button
             v-if="row.edit"
             type="success"
@@ -109,7 +79,7 @@
             type="primary"
             size="small"
             icon="el-icon-edit"
-            @click="row.edit=!row.edit"
+            @click="row.edit = !row.edit"
           >
             Edit
           </el-button>
