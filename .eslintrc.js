@@ -12,6 +12,7 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    '@typescript-eslint/no-extra-semi': 'off',
     'vue/object-curly-spacing': 'off',
     'space-before-function-paren': 'off',
     '@typescript-eslint/ban-types': 'off',

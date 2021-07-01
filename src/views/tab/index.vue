@@ -1,17 +1,13 @@
 <template>
   <div class="tab-container">
-    <el-tag>mounted times ：{{ createdTimes }}</el-tag>
-    <el-alert
-      :closable="false"
-      style="width:200px; display:inline-block; vertical-align:middle; margin-left:30px;"
-      title="Tab with keep-alive"
+<el-tag>mounted times ：{{ createdTimes }}</el-tag>
+<el-alert
+     :closable="false"
+     style="width:200px; display:inline-block; vertical-align:middle; margin-left:30px;"
+     title="Tab with keep-alive"
       type="success"
     />
-    <el-tabs
-      v-model="activeName"
-      style="margin-top:15px"
-      type="border-card"
-    >
+    <el-tabs v-model="activeName" style="margin-top:15px" type="border-card">
       <el-tab-pane
         v-for="item in tabMapOptions"
         :key="item.key"
