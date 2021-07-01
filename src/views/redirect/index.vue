@@ -14,7 +14,7 @@ export default class extends Vue {
   }
 
   render() {
-    // Avoid warning for missing template
+    // Avoid warning for missing template test
   }
 }
 </script>
