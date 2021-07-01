@@ -18,7 +18,6 @@ import '@/utils/error-log'
 import '@/pwa/register-service-worker'
 import * as directives from '@/directives'
 import * as filters from '@/filters'
-import { RenderContext } from 'vue/types/umd'
 
 Vue.use(ElementUI, {
   size: AppModule.size, // Set element-ui default size
@@ -32,12 +31,12 @@ Vue.use(SvgIcon, {
 })
 
 // Register global directives
-Object.keys(directives).forEach((key) => {
+Object.keys(directives).forEach(key => {
   Vue.directive(key, (directives as { [key: string]: DirectiveOptions })[key])
 })
 
 // Register global filter functions
-Object.keys(filters).forEach((key) => {
+Object.keys(filters).forEach(key => {
   Vue.filter(key, (filters as { [key: string]: Function })[key])
 })
 
@@ -47,5 +46,5 @@ new Vue({
   router,
   store,
   i18n,
-  render: (h) => h(App)
+  render: h => h(App)
 }).$mount('#app')
